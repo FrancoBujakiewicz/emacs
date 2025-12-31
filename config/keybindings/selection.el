@@ -8,4 +8,3 @@
 
  (global-set-key (kbd "C-p") (lambda () (interactive)
  (when (use-region-p) (delete-region (region-beginning) (region-end))) (yank)))
-

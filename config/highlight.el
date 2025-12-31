@@ -12,4 +12,3 @@
 
  (advice-add 'save-buffer :after (lambda (&rest _)
   (highlight-region (point-min) (point-max))))
-

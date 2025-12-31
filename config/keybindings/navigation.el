@@ -19,8 +19,8 @@
   (string-prefix-p "*scratch" (buffer-name))))
   (next-buffer))))
 
- (global-set-key (kbd "C-<left>") 'previous-buffer) ;;'switch-user-buffer -1)
- (global-set-key (kbd "C-<right>") 'next-buffer) ;;'switch-user-buffer 1)
+ (global-set-key (kbd "C-<left>") (lambda () (interactive) (switch-user-buffer 1)))
+ (global-set-key (kbd "C-<right>") (lambda () (interactive) (switch-user-buffer -1)))
 
  (global-set-key (kbd "C-g") 'goto-line)
  

@@ -9,4 +9,3 @@
  (next-buffer))))
 
  (global-set-key (kbd "C-s") 'save-buffer)
-

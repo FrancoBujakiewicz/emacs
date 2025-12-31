@@ -7,4 +7,3 @@
   (setq interprogram-paste-function (lambda () (let
   ((xclip-output (shell-command-to-string "xclip -o -selection clipboard")))
   (unless (string= (car kill-ring) xclip-output) xclip-output))))
-
