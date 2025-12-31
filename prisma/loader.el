@@ -1,5 +1,5 @@
 
- (load-file "~/.config/emacs/prisma/base/theme.el")
+ (load-file "~/.config/emacs/prisma/core/theme.el")
 
  (add-to-list 'custom-theme-load-path "~/.config/emacs/prisma/lang/")
 
@@ -16,4 +16,3 @@
 
  (add-hook 'find-file-hook 'load-language-theme)
  (add-hook 'window-buffer-change-functions (lambda (frame) (load-language-theme)))
-

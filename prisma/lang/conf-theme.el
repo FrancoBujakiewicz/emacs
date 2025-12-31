@@ -18,4 +18,3 @@
   `(font-lock-string-face ((t :foreground ,variant-1))))
 
  (provide-theme 'conf)
-

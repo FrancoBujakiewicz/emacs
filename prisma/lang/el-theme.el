@@ -22,4 +22,3 @@
   `(numeric-values-face ((t :foreground ,variant-2 :weight ultra-bold))))
 
  (provide-theme 'el)
-
