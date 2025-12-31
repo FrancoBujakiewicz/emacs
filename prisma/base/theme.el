@@ -1,5 +1,5 @@
 
- (load-file "~/.config/emacs/prisma/base/hook.el")
+ (load-file "~/.config/emacs/prisma/base/fontlock.el")
 
  (set-face-attribute 'region nil :background 'unspecified :foreground "#949494")
  (set-face-attribute 'font-lock-comment-delimiter-face nil :foreground "#949494")
