@@ -1,13 +1,13 @@
 
- (setq-default mode-line-format nil)
- (menu-bar-mode -1)
- (which-key-mode -1)
-
  (when (and (fboundp 'native-comp-available-p) (native-comp-available-p))
  (add-to-list 'native-comp-eln-load-path
  (expand-file-name "~/.cache/emacs/eln-cache/"))
  (setq native-compile-target-directory
  (expand-file-name "~/.cache/emacs/eln-cache/")))
+
+ (setq-default mode-line-format nil)
+ (menu-bar-mode -1)
+ (which-key-mode -1)
 
  (setq
 
@@ -44,4 +44,4 @@
  (setq i (1+ i))))
 
  (add-hook 'emacs-startup-hook (lambda ()            
- (when (cl-some #'buffer-file-name (buffer-list)) (kill-buffer "*scratch*"))))
+ (when (cl-some 'buffer-file-name (buffer-list)) (kill-buffer "*scratch*"))))
