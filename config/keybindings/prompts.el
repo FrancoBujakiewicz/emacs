@@ -4,6 +4,7 @@
 
  (global-set-key (kbd "C-h s") 'shell-command)
  (global-set-key (kbd "C-h e") 'eval-expression)
+
  (global-set-key (kbd "C-h h") (lambda ()
  (interactive) (prin1 (text-properties-at (point)))))
 

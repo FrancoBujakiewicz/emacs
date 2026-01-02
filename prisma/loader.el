@@ -1,5 +1,5 @@
 
- (load-file "~/.config/emacs/prisma/core/theme.el")
+ (ignore-errors (load-file "~/.config/emacs/prisma/base/theme.el"))
 
  (add-to-list 'custom-theme-load-path "~/.config/emacs/prisma/lang/")
 

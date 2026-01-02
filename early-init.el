@@ -3,6 +3,12 @@
  (menu-bar-mode -1)
  (which-key-mode -1)
 
+ (when (and (fboundp 'native-comp-available-p) (native-comp-available-p))
+ (add-to-list 'native-comp-eln-load-path
+ (expand-file-name "~/.cache/emacs/eln-cache/"))
+ (setq native-compile-target-directory
+ (expand-file-name "~/.cache/emacs/eln-cache/")))
+
  (setq
 
    make-backup-files nil
@@ -37,8 +43,5 @@
  (while (< i 256) (global-set-key (vector i) 'self-insert-command)
  (setq i (1+ i))))
 
- (when (and (fboundp 'native-comp-available-p) (native-comp-available-p))
- (add-to-list 'native-comp-eln-load-path
- (expand-file-name "~/.cache/emacs/eln-cache/"))
- (setq native-compile-target-directory
- (expand-file-name "~/.cache/emacs/eln-cache/")))
+ (add-hook 'emacs-startup-hook (lambda ()            
+ (when (cl-some #'buffer-file-name (buffer-list)) (kill-buffer "*scratch*"))))
