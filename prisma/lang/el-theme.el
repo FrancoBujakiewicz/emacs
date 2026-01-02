@@ -18,7 +18,7 @@
 
   `(font-lock-string-face ((t :foreground ,variant-2 :weight ultra-bold)))
   `(font-lock-function-name-face ((t :foreground ,variant-2)))
-  `(lisp-builtin-values-face ((t :foreground ,variant-2 :weight ultra-bold)))
+  `(lisp-dialect-boolean-face ((t :foreground ,variant-2 :weight ultra-bold)))
   `(numeric-values-face ((t :foreground ,variant-2 :weight ultra-bold))))
 
  (provide-theme 'el)
