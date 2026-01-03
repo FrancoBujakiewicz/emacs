@@ -10,18 +10,6 @@
  (global-set-key (kbd "C-<up>") 'beginning-of-buffer)
  (global-set-key (kbd "C-<down>") 'end-of-buffer)
 
- (defun switch-user-buffer (direction)
-  "Switch to next/previous file or *scratch* buffer."
-  (interactive)
-  (let ((switch-fn (if (> direction 0) 'next-buffer 'previous-buffer)))
-  (funcall switch-fn)
-  (while (not (or (buffer-file-name)
-  (string-prefix-p "*scratch" (buffer-name))))
-  (next-buffer))))
-
- (global-set-key (kbd "C-<left>") (lambda () (interactive) (switch-user-buffer 1)))
- (global-set-key (kbd "C-<right>") (lambda () (interactive) (switch-user-buffer -1)))
-
  (global-set-key (kbd "C-g") 'goto-line)
  
  (global-set-key (kbd "RET") 'newline)
