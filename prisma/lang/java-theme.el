@@ -1,8 +1,8 @@
 
  (deftheme el "Elisp theme.")
 
- (defvar variant-0 "#FAA8FF" "Color variant 0.")
- (defvar variant-1 "#FCD1FF" "Color variant 1.") 
+ (defvar variant-0 "#FAABFF" "Color variant 0.")
+ (defvar variant-1 "#FAC9FF" "Color variant 1.") 
  (defvar variant-2 "#F787FF" "Color variant 2.")
 
  (custom-theme-set-faces 'el
