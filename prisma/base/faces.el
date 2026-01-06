@@ -18,3 +18,5 @@
  (add-hook 'after-change-major-mode-hook (lambda () 
   (setq-local face-remapping-alist (cons '(font-lock-warning-face empty-face)
   (assq-delete-all 'font-lock-warning-face face-remapping-alist)))))
+
+ (add-hook 'dired-mode-hook (lambda () (font-lock-mode -1)))
