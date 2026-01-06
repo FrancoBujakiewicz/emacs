@@ -4,11 +4,10 @@
  (global-set-key (kbd "<up>") 'previous-line)
  (global-set-key (kbd "<down>") 'next-line)
 
- (global-set-key (kbd "<home>") 'beginning-of-line)
- (global-set-key (kbd "<end>") 'end-of-line)
-
- (global-set-key (kbd "C-<up>") 'beginning-of-buffer)
- (global-set-key (kbd "C-<down>") 'end-of-buffer)
+ (global-set-key (kbd "M-<left>") 'beginning-of-line)
+ (global-set-key (kbd "M-<right>") 'end-of-line)
+ (global-set-key (kbd "M-<up>") 'beginning-of-buffer)
+ (global-set-key (kbd "M-<down>") 'end-of-buffer)
 
  (global-set-key (kbd "C-g") 'goto-line)
  

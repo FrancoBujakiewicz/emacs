@@ -4,8 +4,8 @@
  (setq bs-configurations '(("files" nil nil 
  "^\\*\\(Messages\\|Completions\\)\\*$" nil nil)))
 
- (global-set-key (kbd "C-<right>") 'next-buffer) ;;'bs-cycle-next)
- (global-set-key (kbd "C-<left>") 'previous-buffer) ;;'bs-cycle-previous)
+ (global-set-key (kbd "C-<right>") 'bs-cycle-next)
+ (global-set-key (kbd "C-<left>") 'bs-cycle-previous)
 
  (global-set-key (kbd "C-b")
  (lambda () (interactive) (switch-to-buffer "*scratch*")

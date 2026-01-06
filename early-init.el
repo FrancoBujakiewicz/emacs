@@ -11,15 +11,13 @@
 
  (setq
 
-   make-backup-files nil
-   auto-save-default nil
-   auto-save-list-file-prefix nil
+  make-backup-files nil
+  auto-save-default nil
+  auto-save-list-file-prefix nil
 
-   initial-scratch-message nil
-   inhibit-startup-message t
-   inhibit-message t
-   
- )
+  initial-scratch-message nil
+  inhibit-startup-message t
+  inhibit-message t)
 
  ;; Supress edges of buffer messages and others like "Quit".
 
@@ -33,6 +31,8 @@
 
  (use-global-map (make-sparse-keymap))
 
+ (set-input-mode nil nil 0)
+
  ;; Enabling type printeable characters.
 
  (global-set-key [remap self-insert-command] 'self-insert-command)
@@ -45,3 +45,4 @@
 
  (add-hook 'emacs-startup-hook (lambda ()            
  (when (cl-some 'buffer-file-name (buffer-list)) (kill-buffer "*scratch*"))))
+
