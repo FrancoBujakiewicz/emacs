@@ -14,5 +14,3 @@
 
  (set-face-attribute 'minibuffer-prompt nil :foreground "#FFFFFF")
 
- (set-face-attribute 'completions-highlight nil 
-  :background "#FFFFFF" :foreground "#000000")
