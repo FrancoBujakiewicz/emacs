@@ -1,10 +1,4 @@
 
- (when (and (fboundp 'native-comp-available-p) (native-comp-available-p))
- (add-to-list 'native-comp-eln-load-path
- (expand-file-name "~/.cache/emacs/eln-cache/"))
- (setq native-compile-target-directory
- (expand-file-name "~/.cache/emacs/eln-cache/")))
-
  (setq-default mode-line-format nil)
  (menu-bar-mode -1)
  (which-key-mode -1)
@@ -18,6 +12,12 @@
   initial-scratch-message nil
   inhibit-startup-message t
   inhibit-message t)
+
+ (when (and (fboundp 'native-comp-available-p) (native-comp-available-p))
+ (add-to-list 'native-comp-eln-load-path
+ (expand-file-name "~/.cache/emacs/eln-cache/"))
+ (setq native-compile-target-directory
+ (expand-file-name "~/.cache/emacs/eln-cache/")))
 
  ;; Supress edges of buffer messages and others like "Quit".
 
