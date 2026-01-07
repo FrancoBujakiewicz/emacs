@@ -8,6 +8,7 @@
   make-backup-files nil
   auto-save-default nil
   auto-save-list-file-prefix nil
+  create-lockfiles nil
 
   initial-scratch-message nil
   inhibit-startup-message t
@@ -43,5 +44,5 @@
  (while (< i 256) (global-set-key (vector i) 'self-insert-command)
  (setq i (1+ i))))
 
- (add-hook 'emacs-startup-hook (lambda () 
- (if (cl-some 'buffer-file-name (buffer-list)) (kill-buffer "*scratch*") (dired "."))))
+ (add-hook 'emacs-startup-hook (lambda () (kill-buffer "*scratch*")
+ (unless (cl-some 'buffer-file-name (buffer-list)) (dired "."))))
