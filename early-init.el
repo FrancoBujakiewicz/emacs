@@ -1,4 +1,4 @@
-
+ 
  (setq-default mode-line-format nil)
  (menu-bar-mode -1)
  (which-key-mode -1)
@@ -43,6 +43,5 @@
  (while (< i 256) (global-set-key (vector i) 'self-insert-command)
  (setq i (1+ i))))
 
- (add-hook 'emacs-startup-hook (lambda ()            
- (when (cl-some 'buffer-file-name (buffer-list)) (kill-buffer "*scratch*"))))
-
+ (add-hook 'emacs-startup-hook (lambda () 
+ (if (cl-some 'buffer-file-name (buffer-list)) (kill-buffer "*scratch*") (dired "."))))

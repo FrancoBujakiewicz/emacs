@@ -1,5 +1,5 @@
 
- (global-set-key (kbd "C-f") (lambda ()
+ (global-set-key (kbd "M-f") (lambda ()
  (interactive) (find-alternate-file (read-file-name ""))))
 
  (global-set-key (kbd "C-h s") 'shell-command)

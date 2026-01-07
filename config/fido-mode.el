@@ -8,4 +8,3 @@
 
  (advice-add 'icomplete-completions :filter-return (lambda (completions)
  (replace-regexp-in-string "[{}]" "" completions)))
-

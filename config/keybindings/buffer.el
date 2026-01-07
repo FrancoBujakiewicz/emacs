@@ -7,9 +7,7 @@
  (global-set-key (kbd "C-<right>") 'bs-cycle-next)
  (global-set-key (kbd "C-<left>") 'bs-cycle-previous)
 
- (global-set-key (kbd "C-b")
- (lambda () (interactive) (switch-to-buffer "*scratch*")
- (find-alternate-file (read-file-name ""))))
+ (global-set-key (kbd "M-b") (lambda () (interactive) (dired ".")))
 
  (global-set-key (kbd "C-x k")
  (lambda () (interactive) (kill-buffer (current-buffer))
